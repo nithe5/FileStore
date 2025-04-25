@@ -49,12 +49,12 @@ FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))#put 0 to dis
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "50"))
 
-START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
+START_PIC = os.environ.get("START_PIC", "https://i.ibb.co/k6MrTw2Q/bfc5551f377e.jpg")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://i.ibb.co/zWNdPh6H/f54724215b21.jpg")
 
 # Turn this feature on or off using True or False put value inside  ""
 # TRUE for yes FALSE if no 
-TOKEN = True if os.environ.get('TOKEN', "True") == "True" else False  #For Enable Token 
+TOKEN = True if os.environ.get('TOKEN', "False") == "True" else False  #For Enable Token 
 
 #TOKEN = False if os.environ.get('TOKEN', "FALSE") == 'FALSE' else False # For disable Token 
 
