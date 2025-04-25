@@ -155,7 +155,7 @@ async def start_command(client: Client, message: Message):
             for snt_msg in codeflix_msgs:    
     if snt_msg:
         try:    
-            await snt_msg.delete()  # Delete each sent message
+            await snt_msg.delete()  # Delete the message
         except Exception as e:
             print(f"Error deleting message {snt_msg.id}: {e}")
 
