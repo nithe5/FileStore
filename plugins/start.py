@@ -170,7 +170,7 @@ async def start_command(client: Client, message: Message):
                 ) if reload_url else None
 
                 await notification_msg.edit(
-                    "<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ:"♻️ Cʟɪᴄᴋ Hᴇʀᴇ" ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
+                    "<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ: ♻️ Cʟɪᴄᴋ Hᴇʀᴇ  ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
                     reply_markup=keyboard
                 )
             except Exception as e:
