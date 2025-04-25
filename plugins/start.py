@@ -147,7 +147,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>⚠️ ᴀʀᴀʀᴀ ᴛʜɪs ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 10 minutes (ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs).</b>"
+                f"<b>⚠️ ᴀʀᴀʀᴀ ᴛʜɪs ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 10 minutes (ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs).📌 ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴛᴏ sᴏᴍᴇᴡʜᴇʀᴇ ᴇʟsᴇ ᴀɴᴅ sᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛʜᴇʀᴇ.</b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -170,7 +170,7 @@ async def start_command(client: Client, message: Message):
                 ) if reload_url else None
 
                 await notification_msg.edit(
-                    "<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ: ([♻️ ᴄʟɪᴄᴋ ʜᴇʀᴇ] , url=reload_url)ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
+                    "<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ:"♻️ Cʟɪᴄᴋ Hᴇʀᴇ" ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
                     reply_markup=keyboard
                 )
             except Exception as e:
@@ -178,7 +178,7 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                    [InlineKeyboardButton("• Index Channel•", url="https://t.me/ARTIC_INDEX/69")],
+                    [InlineKeyboardButton("• ɪɴᴅᴇx ᴄʜᴀɴɴᴇʟ•", url="https://t.me/ARTIC_INDEX/69")],
 
     [
                     InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data = "about"),
