@@ -153,28 +153,30 @@ async def start_command(client: Client, message: Message):
             await asyncio.sleep(FILE_AUTO_DELETE)
 
             for snt_msg in codeflix_msgs:    
-                if snt_msg:
-                    try:    
-                        await snt_msg.delete()  
-                    except Exception as e:
-                        print(f"Error deleting message {snt_msg.id}: {e}")
+    if snt_msg:
+        try:    
+            await snt_msg.delete()  # Delete each sent message
+        except Exception as e:
+            print(f"Error deleting message {snt_msg.id}: {e}")
 
-            try:
-                reload_url = (
-                    f"https://t.me/{client.username}?start={message.command[1]}"
-                    if message.command and len(message.command) > 1
-                    else None
-                )
-                keyboard = InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("♻️ Cʟɪᴄᴋ Hᴇʀᴇ", url=reload_url)]]
-                ) if reload_url else None
+try:
+    reload_url = (
+        f"https://t.me/{client.username}?start={message.command[1]}"
+        if message.command and len(message.command) > 1
+        else None
+    )
+    # Creating an inline button that directs the user to a link if reload_url exists
+    keyboard = InlineKeyboardMarkup(
+        [[InlineKeyboardButton("♻️ Cʟɪᴄᴋ Hᴇʀᴇ", url=reload_url)]]
+    ) if reload_url else None
 
-                await notification_msg.edit(
-    "<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ: <a href='https://t.me/yourlink'>♻️ Cʟɪᴄᴋ Hᴇʀᴇ</a> ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
-    reply_markup=keyboard
-                )
-            except Exception as e:
-                print(f"Error updating notification with 'Get File Again' button: {e}")
+    # Edit the previous message with the new text and optional button
+    await notification_msg.edit(
+        f"<b>ᴀʀᴀʀᴀ ᴘʀᴇᴠɪᴏᴜꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀꜱ ᴅᴇʟᴇᴛᴇᴅ 🗑 ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇꜱ ᴀɢᴀɪɴ, ᴛʜᴇɴ ᴄʟɪᴄᴋ: <a href='{reload_url}'>♻️ Cʟɪᴄᴋ Hᴇʀᴇ</a>  ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴇʟꜱᴇ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.</b>",
+        reply_markup=keyboard
+    )
+except Exception as e:
+    print(f"Error updating notification with 'Get File Again' button: {e}")
     else:
         reply_markup = InlineKeyboardMarkup(
             [
