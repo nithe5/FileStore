@@ -49,7 +49,7 @@ FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))#put 0 to dis
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "50"))
 
-START_PIC = os.environ.get("START_PIC", "https://i.ibb.co/k6MrTw2Q/bfc5551f377e.jpg")
+START_PIC = os.environ.get("START_PIC", "https://i.ibb.co/jvvKNyFt/4cf2116d0c9e.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://i.ibb.co/zWNdPh6H/f54724215b21.jpg")
 
 # Turn this feature on or off using True or False put value inside  ""
